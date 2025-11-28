@@ -97,14 +97,6 @@
                     android:letterSpacing="0.1"
                     android:layout_marginBottom="4dp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="⚡ TOURNAMENT EDITION ⚡"
-                    android:textSize="14sp"
-                    android:textColor="#F39C12"
-                    android:textStyle="bold"
-                    android:letterSpacing="0.2" />
             </LinearLayout>
 
             <!-- Carte principale avec effet glassmorphism -->
@@ -259,28 +251,10 @@
                 android:gravity="center"
                 android:layout_marginTop="16dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="━━━━━━━━━━━━"
-                    android:textColor="#333333"
-                    android:layout_marginBottom="8dp" />
+              
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Made with ❤️ for LSI 3"
-                    android:textSize="13sp"
-                    android:textColor="#666666"
-                    android:textStyle="italic" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Faculté des Sciences de Sfax"
-                    android:textSize="11sp"
-                    android:textColor="#555555"
-                    android:layout_marginTop="4dp" />
+          
+               
             </LinearLayout>
 
             <!-- Spacer bottom -->
