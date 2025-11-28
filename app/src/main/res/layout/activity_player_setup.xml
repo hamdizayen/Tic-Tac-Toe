@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <!-- Background animé -->
+    <com.example.projetdevmobile.FallingSymbolsView
+        android:id="@+id/fallingBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Contenu principal -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="32dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="👥"
+                android:textSize="80sp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CONFIGURATION"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:shadowColor="#000000"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="4"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Entrez les noms des joueurs"
+                android:textSize="16sp"
+                android:textColor="#CCCCCC"
+                android:layout_marginBottom="48dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#1E1E1E"
+                android:padding="32dp"
+                android:elevation="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🎮 Joueur 1"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#E74C3C"
+                    android:layout_marginBottom="12dp" />
+
+                <EditText
+                    android:id="@+id/etJoueur1"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:hint="Entrez votre nom"
+                    android:textSize="18sp"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#666666"
+                    android:background="#2C3E50"
+                    android:padding="16dp"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:layout_marginBottom="32dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#FFFFFF"
+                    android:alpha="0.2"
+                    android:layout_marginBottom="32dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🎮 Joueur 2"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#3498DB"
+                    android:layout_marginBottom="12dp" />
+
+                <EditText
+                    android:id="@+id/etJoueur2"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:hint="Entrez votre nom"
+                    android:textSize="18sp"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#666666"
+                    android:background="#2C3E50"
+                    android:padding="16dp"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:layout_marginBottom="32dp" />
+
+                <Button
+                    android:id="@+id/btnCommencer"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:text="🚀 COMMENCER LE TOURNOI"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="#27AE60"
+                    android:elevation="8dp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ℹ️ Les symboles X et O seront attribués aléatoirement"
+                android:textSize="14sp"
+                android:textColor="#95A5A6"
+                android:gravity="center"
+                android:layout_marginTop="24dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

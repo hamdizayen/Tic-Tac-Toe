@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <com.example.projetdevmobile.FallingSymbolsView
+        android:id="@+id/fallingBackgroundRules"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="32dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📖"
+                android:textSize="80sp"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RÈGLES DU JEU"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:gravity="center"
+                android:layout_marginBottom="32dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#1E1E1E"
+                android:padding="32dp"
+                android:elevation="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🎮 JEU X-O (TIC-TAC-TOE)"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="#3498DB"
+                    android:layout_marginBottom="24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📋 Principe"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginBottom="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="• Grille de 3×3 cases\n• Deux joueurs : X et O\n• Jouez à tour de rôle\n• Le joueur X commence toujours"
+                    android:textSize="16sp"
+                    android:textColor="#CCCCCC"
+                    android:lineSpacingExtra="6dp"
+                    android:layout_marginBottom="24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🏆 Conditions de victoire"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginBottom="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="• Alignez 3 symboles identiques\n• Ligne, colonne ou diagonale\n• Le premier qui aligne gagne"
+                    android:textSize="16sp"
+                    android:textColor="#CCCCCC"
+                    android:lineSpacingExtra="6dp"
+                    android:layout_marginBottom="24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⚖️ Match nul"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginBottom="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="• Grille pleine sans vainqueur\n• Aucun point attribué"
+                    android:textSize="16sp"
+                    android:textColor="#CCCCCC"
+                    android:lineSpacingExtra="6dp"
+                    android:layout_marginBottom="24dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🎯 Mode Tournoi"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginBottom="12dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="• Plusieurs parties consécutives (5, 10 ou 15)\n• Les symboles X et O sont réattribués aléatoirement à chaque partie\n• Scores cumulés automatiquement\n• Le joueur avec le plus de victoires gagne le tournoi"
+                    android:textSize="16sp"
+                    android:textColor="#CCCCCC"
+                    android:lineSpacingExtra="6dp"
+                    android:layout_marginBottom="24dp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnRetour"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="🏠 RETOUR À L'ACCUEIL"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#E74C3C"
+                android:elevation="6dp"
+                android:layout_marginTop="32dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

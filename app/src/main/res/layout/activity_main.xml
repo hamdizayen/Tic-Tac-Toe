@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <!-- Background animé -->
+    <com.example.projetdevmobile.FallingSymbolsView
+        android:id="@+id/fallingBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Overlay semi-transparent pour meilleur contraste -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#AA000000" />
+
+    <!-- Contenu principal -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:gravity="center">
+
+            <!-- Spacer top -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+
+            <!-- Logo et titre -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginBottom="16dp">
+
+                <!-- Symboles X-O animés avec effet NEON -->
+                <LinearLayout
+                    android:id="@+id/symbolsLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center">
+
+                    <!-- X avec effet NEON ROUGE -->
+                    <TextView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:text="✕"
+                        android:textSize="72sp"
+                        android:textStyle="bold"
+                        android:textColor="#FF0000"
+                        android:shadowColor="#FF0000"
+                        android:shadowDx="0"
+                        android:shadowDy="0"
+                        android:shadowRadius="30"
+                        android:gravity="center"
+                        android:layout_marginEnd="20dp"
+                        android:elevation="12dp" />
+
+                    <!-- O avec effet NEON BLEU -->
+                    <TextView
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:text="O"
+                        android:textSize="82sp"
+                        android:textStyle="bold"
+                        android:textColor="#00BFFF"
+                        android:shadowColor="#00BFFF"
+                        android:shadowDx="0"
+                        android:shadowDy="0"
+                        android:shadowRadius="30"
+                        android:gravity="center"
+                        android:elevation="12dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TIC-TAC-TOE"
+                    android:textSize="42sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:shadowColor="#000000"
+                    android:shadowDx="0"
+                    android:shadowDy="4"
+                    android:shadowRadius="12"
+                    android:letterSpacing="0.1"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⚡ TOURNAMENT EDITION ⚡"
+                    android:textSize="14sp"
+                    android:textColor="#F39C12"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.2" />
+            </LinearLayout>
+
+            <!-- Carte principale avec effet glassmorphism -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#DD1E1E1E"
+                android:padding="28dp"
+                android:elevation="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="16dp">
+
+                <!-- Titre section -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⚙️ CONFIGURATION"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginBottom="24dp"
+                    android:layout_gravity="center" />
+
+                <!-- Nombre de parties avec style moderne -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="#2C3E50"
+                    android:padding="20dp"
+                    android:elevation="4dp"
+                    android:layout_marginBottom="24dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🏆 Nombre de parties"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:layout_marginBottom="12dp" />
+
+                    <Spinner
+                        android:id="@+id/spinnerParties"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:background="@drawable/spinner_background"
+                        android:paddingStart="20dp"
+                        android:paddingEnd="48dp"
+                        android:spinnerMode="dropdown"
+                        android:elevation="4dp" />
+                </LinearLayout>
+
+                <!-- Séparateur stylé -->
+                <View
+                    android:layout_width="80dp"
+                    android:layout_height="4dp"
+                    android:background="#3498DB"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="24dp" />
+
+                <!-- Bouton JOUER (principal) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/btnJouer"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:text="🎮 JOUER"
+                        android:textSize="28sp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:background="@drawable/button_rounded"
+                        android:elevation="12dp"
+                        android:layout_marginBottom="12dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Commencer une nouvelle partie"
+                        android:textSize="12sp"
+                        android:textColor="#95A5A6"
+                        android:layout_marginBottom="24dp" />
+                </LinearLayout>
+
+                <!-- Boutons secondaires en grille 2x1 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <!-- Bouton Règles -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="8dp">
+
+                        <Button
+                            android:id="@+id/btnPrincipe"
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:text="📖\n\nRÈGLES\nDU JEU"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:textColor="#FFFFFF"
+                            android:background="@drawable/button_menu_rules"
+                            android:elevation="8dp"
+                            android:gravity="center"
+                            android:lineSpacingExtra="4dp" />
+                    </LinearLayout>
+
+                    <!-- Bouton Scores -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="8dp">
+
+                        <Button
+                            android:id="@+id/btnScores"
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:text="📊\n\nDERNIERS\nSCORES"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:textColor="#FFFFFF"
+                            android:background="@drawable/button_menu_scores"
+                            android:elevation="8dp"
+                            android:gravity="center"
+                            android:lineSpacingExtra="4dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Footer stylé -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="━━━━━━━━━━━━"
+                    android:textColor="#333333"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Made with ❤️ for LSI 3"
+                    android:textSize="13sp"
+                    android:textColor="#666666"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Faculté des Sciences de Sfax"
+                    android:textSize="11sp"
+                    android:textColor="#555555"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+
+            <!-- Spacer bottom -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="24dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>
